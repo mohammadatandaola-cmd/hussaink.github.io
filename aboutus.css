@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #00BFFF;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+	background-image:url("IMG-20241102-WA0006.jpg " );
+}
+
+.content-wrapper {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.image {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 50px;
+}
+
+.about-img {
+    background-image: url('IMG-20240704-WA0011 - Copy.jpg');
+}
+
+.vision-img {
+    background-image: url('dai-ke-GkraTrCYA_0-unsplash.jpg' );
+}
+
+.mission-img {
+    background-image: url('fabio-romano-8rrlXOmpVPI-unsplash.jpg');
+}
+
+.offer-img {
+    background-image: url( 'pexels-karolina-grabowska-5717767.jpg');
+}
+
+.story-img {
+    background-image: url('shane-rounce-DNkoNXQti3c-unsplash.jpg');
+}
+
+.community-img {
+    background-image: url('collab-media-F7U6IZFuy2E-unsplash.jpg');
+}
+.care-img{
+	background-image:url('pexels-august-de-richelieu-4259140.jpg');
+}	
+.do-img {
+    background-image: url('mimi-thian-BYGLQ32Wjx8-unsplash.jpg');
+}
+
+.advertise-img {
+    background-image: url('pexels-hikaique-65438.jpg');
+}
+
+h1, h3 {
+    color: crimson;
+}
+
+p {
+    font-size: 18
+	.foot {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+}
+
+.foot p {
+    margin: 0;
+}
+
+.foot a.ul {
+    color: #00FF00;
+    font-size: 16px;
+    text-decoration: none;
+}

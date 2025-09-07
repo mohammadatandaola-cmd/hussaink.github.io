@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        
+        header input {
+            padding: 10px;
+            font-size: 16px;
+        }
+        
+        .product-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .slider {
+            position: relative;
+            width: 80%;
+            margin: auto;
+        }
+        
+        .slide-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            font-size: 2em;
+            cursor: pointer;
+            padding: 10px;
+        }
+        
+        .prev {
+            left: 0;
+        }
+        
+        .next {
+            right: 0;
+        }
+        
+        .product-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+        
+        .product {
+            background-color: #fff;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            min-width: 200px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .product h2 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My E-commerce Site</h1>
+        <input type="text" id="searchBar" placeholder="Search for products...">
+    </header>
+    <section class="product-section">
+        <div class="slider">
+            <button class="slide-nav prev">❮</button>
+            <div class="product-container" id="productContainer">
+                <!-- Products will be loaded here -->
+            </div>
+            <button class="slide-nav next">❯</button>
+        </div>
+    </section>
+    <script>
+        const products = [
+            { id: 1, name: 'Product One', image: 'path/to/image1.jpg' },
+            { id: 2, name: 'Product Two', image: 'path/to/image2.jpg' },
+            { id: 3, name: 'Product Three', image: 'path/to/image3.jpg' },
+            { id: 4, name: 'Product Four', image: 'path/to/image4.jpg' },
+            { id: 5, name: 'Product Five', image: 'path/to/image5.jpg' },
+            { id: 6, name: 'Product Six', image: 'path/to/image6.jpg' },
+            { id: 7, name: 'Product Seven', image: 'path/to/image7.jpg' },
+            { id: 8, name: 'Product Eight', image: 'path/to/image8.jpg' }
+        ];
+        
+        const productContainer = document.getElementById('productContainer');
+        
+        products.forEach(product => {
+            const productDiv = document.createElement('div');
+            productDiv.classList.add('product');
+            productDiv.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <h2>${product.name}</h2>
+            `;
+            productContainer.appendChild(productDiv);
+        });
+        
+        const searchBar = document.getElementById('searchBar');
+        
+        searchBar.addEventListener('input', () => {
+            const searchValue = searchBar.value.toLowerCase();
+            const filteredProducts = products.filter(product => product.name.toLowerCase().includes(searchValue));
+            
+            productContainer.innerHTML = '';
+        
+            filteredProducts.forEach(product => {
+                const productDiv = document.createElement('div');
+                productDiv.classList.add('product');
+                productDiv.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <h2>${product.name}</h2>
+                `;
+                productContainer.appendChild(productDiv);
+            });
+        });
+        
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        
+        prevButton.addEventListener('click', () => {
+            productContainer.scrollBy({
+                left: -200,
+                behavior: 'smooth'
+            });
+        });
+        
+        nextButton.addEventListener('click', () => {
+            productContainer.scrollBy({
+                left: 200,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

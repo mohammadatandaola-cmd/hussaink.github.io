@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: green;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+	.image {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 50px;
+}
+
+.care-img {
+    background-image: url(' berkeley-communications-WEDDt-u3q3o-unsplash.jpg');
+}
+.CONTACT-img {
+    background-image: url(' blake-wisz-q3o_8MteFM0-unsplash.jpg');
+}
+.advert-img {
+    background-image: url('patrick-tomasso-fMntI8HAAB8-unsplash.jpg');
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: crimson;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color:crimson;
+}

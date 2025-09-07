@@ -1,0 +1,112 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('francesco-ungaro-s8Lttiux5xs-unsplash.jpg');
+    background-size: cover; /* Ensure the image covers the entire area */
+    height: 100vh;
+    margin: 0;
+}
+
+.signup-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.social-buttons {
+    text-align: center;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border: 2px solid #ccc;
+    padding: 10px 20px;
+    margin: 10px auto; /* Center align the button */
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    width: 250px;
+}
+
+.social-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.social-button span {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.social-button.google {
+    border-color: #4285f4;
+}
+
+.social-button.google:hover {
+    background-color: #4285f4;
+    color: white;
+}
+
+.social-button.facebook {
+    border-color: #1877f2;
+}
+
+.social-button.facebook:hover {
+    background-color: #1877f2;
+    color: white;
+}
+
+.social-button.yahoo {
+    border-color: #430297;
+}
+
+.social-button.yahoo:hover {
+    background-color: #430297;
+    color: white;
+}
+
+.social-button.apple {
+    border-color: #000000;
+}
+
+.social-button.apple:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.social-button.email {
+    border-color: #333;
+}
+
+.social-button.email:hover {
+    background-color: #333;
+    color: white;
+}
+
+.button-style3 {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border-width: thin;
+    border-style: ridge;
+    border-color: blue;
+    padding: 11px;
+    font-size: 13px;
+    font-family: serif;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 285px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
